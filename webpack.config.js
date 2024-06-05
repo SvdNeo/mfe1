@@ -5,7 +5,10 @@ module.exports = {
   mode: 'development',
   devServer: {
     port: 8083,
-    historyApiFallback: true, // This is useful for SPA
+    historyApiFallback: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   },
   module: {
     rules: [
