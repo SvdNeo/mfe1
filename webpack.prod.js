@@ -1,4 +1,4 @@
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 module.exports = {
@@ -31,6 +31,8 @@ module.exports = {
         './Button': './src/Button',
       },
     }),
-    
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
   ],
 };
